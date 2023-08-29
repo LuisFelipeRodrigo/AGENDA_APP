@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import aplication.dto.UsuarioDTO;
 import aplication.model.Permissao;
 import aplication.model.Usuario;
 import aplication.repository.UsuarioRepository;
@@ -35,7 +36,7 @@ public class UsuarioService {
 		usuarioRepository.deleteById(idusuario);
 
 	}
-	public Usuario updateUsuario(Usuario usuario) {
+	public Usuario updateUsuario(UsuarioDTO usuario) {
 	    Usuario usu = findPorId(usuario.getId());
 
 	    if (usu != null) {
