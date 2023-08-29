@@ -1,13 +1,13 @@
-package service;
+package aplication.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import model.Permissao;
-import model.Usuario;
-import repository.UsuarioRepository;
+import aplication.model.Permissao;
+import aplication.model.Usuario;
+import aplication.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
