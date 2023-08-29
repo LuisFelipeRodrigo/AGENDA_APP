@@ -32,11 +32,12 @@ public class UsuarioController {
 
 	}
 
-//	@RequestMapping(method = RequestMethod.POST)
-//	public ResponseEntity<?> addusuario(@RequestBody Usuario usu) {
-//		Usuario usuario = service.addUsuario(usu);
-//
-//	}
+	@RequestMapping(method = RequestMethod.POST)
+	public ResponseEntity<?> addusuario(@RequestBody Usuario usu) {
+		Usuario usuario = service.addUsuario(usu);
+		return ResponseEntity.ok().body(usuario);
+
+	}
 
 	@RequestMapping(value = "/{idusuario}", method = RequestMethod.DELETE)
 	public void deleteUsu(@PathVariable Integer idusuario) {

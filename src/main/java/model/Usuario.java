@@ -69,6 +69,8 @@ public class Usuario {
 		Usuario other = (Usuario) obj;
 		return Objects.equals(id, other.id);
 	}
+	public Usuario(Usuario usu) {
+	}
 	public Usuario() {
 	}
 	public Usuario(Integer id, String nome, String cpf, String senha, Permissao permissao) {

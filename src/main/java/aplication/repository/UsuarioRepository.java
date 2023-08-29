@@ -19,4 +19,6 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	Usuario findPorTelefone(String telefone);
 
 	Optional<Usuario> findByCpf(String cpf);
+	
+	public Optional<Usuario> findByEmail(String email);
 }

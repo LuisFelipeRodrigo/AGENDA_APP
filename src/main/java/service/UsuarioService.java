@@ -35,7 +35,8 @@ public class UsuarioService {
 		return usuarioRepository.save(usu);
 	}
 
-	public static Usuario addUsuario(String nome, String cpf, String senha, Permissao permissao) {
-		return new Usuario(null, nome, cpf, senha, permissao);
+	public Usuario addUsuario(Usuario usuario) {
+		Usuario usu = new Usuario(usuario);
+		return usuarioRepository.save(usu);
 	}
 }
