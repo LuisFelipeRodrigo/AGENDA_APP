@@ -23,7 +23,6 @@ public class Usuario {
 	@Column(unique = true)
 	private String email;
 	private String cpf;
-	@JsonIgnore
 	private String senha;
 	@Enumerated(EnumType.STRING)
 	private Permissao permissao;
@@ -80,6 +79,8 @@ public class Usuario {
 		return Objects.equals(id, other.id);
 	}
 	public Usuario() {
+	}
+	public Usuario(Usuario usuario) {
 	}
 	public Usuario(Integer id, String nome,String email, String cpf, String senha, Permissao permissao) {
 		this.id = id;

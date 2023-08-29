@@ -7,7 +7,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import aplication.model.*;
-
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 	@Query(value = "SELECT * FROM usuario", nativeQuery = true)
 	List<Usuario> findAllCat();
@@ -20,5 +19,5 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
 
 	Optional<Usuario> findByCpf(String cpf);
 	
-	public Optional<Usuario> findByEmail(String email);
+	Optional<Usuario> findByEmail(String email);
 }
