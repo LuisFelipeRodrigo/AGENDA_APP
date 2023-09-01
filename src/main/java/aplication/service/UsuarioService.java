@@ -7,7 +7,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import aplication.dto.UsuarioDTO;
-import aplication.model.Permissao;
 import aplication.model.Usuario;
 import aplication.repository.UsuarioRepository;
 
@@ -34,7 +33,6 @@ public class UsuarioService {
 	}
 	public void deleteUsu(Integer idusuario) {
 		usuarioRepository.deleteById(idusuario);
-
 	}
 	public Usuario updateUsuario(UsuarioDTO usuario) {
 	    Usuario usu = findPorId(usuario.getId());
@@ -42,10 +40,7 @@ public class UsuarioService {
 	    if (usu != null) {
 	        usu.setNome(usuario.getNome());
 	        usu.setEmail(usuario.getEmail());
-	        usu.setCpf(usuario.getCpf());
 	        usu.setSenha(usuario.getSenha());
-	        usu.setPermissao(usuario.getPermissao());
-
 	        return usuarioRepository.save(usu);
 	    } else {
 	        throw new RuntimeException("Usuário não encontrado");

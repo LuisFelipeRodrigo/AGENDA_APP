@@ -22,10 +22,7 @@ public class Usuario {
 	private String nome;
 	@Column(unique = true)
 	private String email;
-	private String cpf;
 	private String senha;
-	@Enumerated(EnumType.STRING)
-	private Permissao permissao;
 	
 	public String getEmail() {
 		return email;
@@ -39,23 +36,11 @@ public class Usuario {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCpf() {
-		return cpf;
-	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
 	public String getSenha() {
 		return senha;
 	}
 	public void setSenha(String senha) {
 		this.senha = senha;
-	}
-	public Permissao getPermissao() {
-		return permissao;
-	}
-	public void setPermissao(Permissao permissao) {
-		this.permissao = permissao;
 	}
 	public Integer getId() {
 		return id;
@@ -82,12 +67,10 @@ public class Usuario {
 	}
 	public Usuario(Usuario usuario) {
 	}
-	public Usuario(Integer id, String nome,String email, String cpf, String senha, Permissao permissao) {
+	public Usuario(Integer id, String nome,String email, String cpf, String senha) {
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
-		this.cpf = cpf;
 		this.senha = senha;
-		this.permissao = permissao;
 	}
 }
