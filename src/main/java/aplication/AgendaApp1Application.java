@@ -15,7 +15,7 @@ public class AgendaApp1Application {
     }
 
     @Bean
-    public PasswordEncoder getPasswordEncoder() {
+    PasswordEncoder getPasswordEncoder() {
         BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
         return encoder;
     }
